@@ -5,7 +5,7 @@ build [lede](https://github.com/coolsnowwolf/lede) in docker
 # clone project
 git clone https://github.com/whalechoi/lede-builder.git
 # build image
-cd lede-builder && docker build -t lede-builder:debian ./
+cd lede-builder && docker build -t lede-builder:ubuntu ./
 # create work dir
 mkdir ~/work
 # run container
@@ -15,7 +15,7 @@ docker run \
     -h whalechoi \
     -p 10022:22 \
     -v ~/work:/home/builder/work \
-    lede-builder:debian
+    lede-builder:ubuntu
 # connet to container via ssh
 # password is password
 ssh builder@localhost -p 10022
